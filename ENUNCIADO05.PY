@@ -4,11 +4,9 @@ catalogo = [
     {'nombre': 'Teclado Mecánico', 'categoria': 'Accesorios', 'precio': 120.0},
     {'nombre': 'Laptop Oficina', 'categoria': 'Tecnología', 'precio': 1500.0}
 ]
-
 def buscar_productos(lista, termino):
     filtrados = [p for p in lista if termino.lower() in p['nombre'].lower()]
     return sorted(filtrados, key=lambda x: x['precio'])
-
 resultado = buscar_productos(catalogo, "laptop")
 print("--- RESULTADOS DE BÚSQUEDA Y FILTRADO ---")
 for prod in resultado:
